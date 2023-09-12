@@ -11,7 +11,7 @@ This chapter is meant to explain the functions needed to interface with the cube
 First import the relevant commands within the app-macro! in a separate .rs file within your app repository.
 
 ```
-app-macro!{
+app_macro!{
     adcs-service: Adcs{
         query: GetTelemetry => fn get_telemetry(&self, telem_type: TelemType) -> Result<Telemetry>; out: Telemetry;
         query: GetTelemetryRaw => fn get_telemetry_raw(&self, telem_type: TelemType) -> Result<String>; out: String;
