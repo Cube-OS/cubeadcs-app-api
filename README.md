@@ -12,7 +12,7 @@ First import the relevant commands within the app-macro! in a separate .rs file 
 
 ```
 app_macro!{
-    adcs-service: Adcs{
+    adcs_service: Adcs{
         query: GetTelemetry => fn get_telemetry(&self, telem_type: TelemType) -> Result<Telemetry>; out: Telemetry;
         query: GetTelemetryRaw => fn get_telemetry_raw(&self, telem_type: TelemType) -> Result<String>; out: String;
         mutation: SetCommandedAttitudeAngles => fn set_commanded_attitude_angles(&self, roll: i16, pitch: i16, yaw: i16) -> AdcsResult<()>; 
